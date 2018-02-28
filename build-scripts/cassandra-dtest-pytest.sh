@@ -52,7 +52,7 @@ cd cassandra-dtest/
 rm -r upgrade_tests/ # TEMP: remove upgrade_tests - we have no dual JDK installation
 set +e # disable immediate exit from this point
 if [ "${DTEST_TARGET}" = "dtest" ]; then
-    pytest -vv --log-level="INFO" --use-vnodes --num-tokens=32 --junit-xml=nosetests.xml -s --cassandra-dir=$CASSANDRA_DIR --skip-resource-intensive-tests 2>&1 | tee -a ${WORKSPACE}/test_stdout.txt
+    pytest -vv --log-level="INFO" --use-vnodes --num-tokens=32 --junit-xml=nosetests.xml -s --cassandra-dir=$CASSANDRA_DIR --skip-resource-intensive-tests cfid_test.py 2>&1 | tee -a ${WORKSPACE}/test_stdout.txt
 elif [ "${DTEST_TARGET}" = "dtest-novnode" ]; then
     pytest -vv --log-level="INFO" --junit-xml=nosetests.xml -s --cassandra-dir=$CASSANDRA_DIR --skip-resource-intensive-tests 2>&1 | tee -a ${WORKSPACE}/test_stdout.txt
 elif [ "${DTEST_TARGET}" = "dtest-offheap" ]; then

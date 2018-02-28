@@ -15,4 +15,4 @@ docker attach --no-stdin $ID
 echo "$ID done, copying files"
 docker cp $ID:/home/cassandra/cassandra/cassandra-dtest/nosetests.xml .
 docker cp $ID:/home/cassandra/cassandra/test_stdout.txt .
-docker rm $ID
+#docker rm $ID

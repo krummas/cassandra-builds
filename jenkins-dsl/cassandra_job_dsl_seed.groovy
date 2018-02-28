@@ -22,11 +22,11 @@ def mainRepo = "https://git-wip-us.apache.org/repos/asf/cassandra.git"
 if(binding.hasVariable("CASSANDRA_GIT_URL")) {
     mainRepo = "${CASSANDRA_GIT_URL}"
 }
-def buildsRepo = "https://git.apache.org/cassandra-builds.git"
+def buildsRepo = "https://github.com/krummas/cassandra-builds.git"
 if(binding.hasVariable("CASSANDRA_BUILDS_GIT_URL")) {
     buildsRepo = "${CASSANDRA_BUILDS_GIT_URL}"
 }
-def buildsBranch = "master"
+def buildsBranch = "dock"
 if(binding.hasVariable("CASSANDRA_BUILDS_BRANCH")) {
     buildsBranch = "${CASSANDRA_BUILDS_BRANCH}"
 }
